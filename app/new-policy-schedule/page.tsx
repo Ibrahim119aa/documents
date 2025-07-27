@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react"
 import { PDFViewer, PDFDownloadLink } from "@react-pdf/renderer"
 import { Button } from "@/components/ui/button"
-import MotorInsuranceCertificate from "@/components/motor-insurance-certificate"
 
-export default function PdfGeneratorPage() {
+import InsuranceDocument from "@/components/InsuranceDocument"
+export default function InsurancePage() {
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
@@ -23,17 +23,12 @@ export default function PdfGeneratorPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
       <div className="mb-6">
-        <PDFDownloadLink
-          document={<MotorInsuranceCertificate />}
-          fileName="motor-insurance-certificate.pdf"
-        >
-         
-        </PDFDownloadLink>
+        
       </div>
       <div className="w-full h-[80vh] max-w-4xl border border-gray-300 rounded-lg overflow-hidden shadow-lg">
         <PDFViewer width="100%" height="100%">
-          <MotorInsuranceCertificate />
-
+          {/* <MotorInsuranceCertificate /> */}
+          <InsuranceDocument />
         </PDFViewer>
       </div>
     </div>
