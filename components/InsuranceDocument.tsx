@@ -91,9 +91,9 @@ const styles = StyleSheet.create({
   mainCertificateSection1: {
 
     borderLeft: 1,
-    borderBottom:1,
-    marginBottom:'5',
-    paddingBottom:'5',
+    borderBottom: 1,
+    marginBottom: '5',
+    paddingBottom: '5',
     borderRight: 1,
     borderColor: "#000",
   },

@@ -85,6 +85,8 @@ const styles = StyleSheet.create({
     borderTop: 1,
     borderLeft: 1,
     borderRight: 1,
+    borderBottom:1,
+    paddingBottom:'10',
 
 
     borderColor: "#000",
@@ -376,6 +378,10 @@ const styles = StyleSheet.create({
   {
     marginTop: 2
   },
+  marginTop1:
+  {
+    marginTop: 10
+  },
   underlinetext:
   {
     textDecoration: 'underline'
@@ -424,7 +430,56 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: '18',
     marginBottom: '20'
+  },
+  flexBox:
+  {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '20',
+    width: '48%',
+    paddingLeft: '8',
+
+  },
+  flexBox1:
+  {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '20',
+    width: '45%',
+
+  },
+  leftSpace:
+  {
+    paddingLeft: '10'
+  },
+  underLine:
+  {
+
+    marginLeft: '10',
+    marginRight: '10',
+    marginTop: '10',
+    borderWidth: '1',
+    borderColor: 'black',
+    height: '2'
+  },
+  importantNote:
+  {
+
+    marginLeft: '10',
+    marginRight: '10',
+    marginTop: '15',
+    backgroundColor: 'black',
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize:'9',
+    color:'white',
+    paddingTop:'5',
+    fontWeight:'bold',
+    paddingBottom:'5'
+
   }
+
 })
 
 const StatementFactAgeas = () => (
@@ -493,547 +548,161 @@ const StatementFactAgeas = () => (
             </View>
 
           </View>
-        </View>
 
-        {/* Policy Details Table */}
-        <View style={styles.scheduleTable}>
-          <View style={styles.scheduleRow}>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Proposer's Occupation</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellLarge]}>
-              <Text>Not required</Text>
-            </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>NCD Years Given</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellLarge, styles.scheduleCellLast]}>
-              <Text>N/A</Text>
-            </View>
-          </View>
-          <View style={styles.scheduleRow}>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Policy Number</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellLarge]}>
-              <Text>TCV-MOT-44072540</Text>
-            </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Product</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellLarge, styles.scheduleCellLast]}>
-              <Text>Private Car</Text>
-            </View>
-          </View>
-          <View style={styles.scheduleRow}>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Effective From</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellLarge]}>
-              <Text>09/06/2025 15:35</Text>
-            </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>To</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellLarge, styles.scheduleCellLast]}>
-              <Text>09/06/2026 15:35</Text>
-            </View>
-          </View>
-        </View>
-        <View style={styles.scheduleEmptyRow}>
-          <Text style={styles.bold}>Vehicle Details:</Text>
-        </View>
-        {/* Vehicle Details Table */}
-        <View style={styles.scheduleTable}>
-          <View style={styles.scheduleRow}>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall]}>
-              <Text style={styles.bold}>Make</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall]}>
-              <Text>NISSAN</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall]}>
-              <Text style={styles.bold}>Model</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall]}>
-              <Text >MICRA TEMPEST</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall]}>
-              <Text style={styles.bold}>Body Type</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall, styles.scheduleCellLast]}>
-              <Text>N/A</Text>
-            </View>
-          </View>
-          <View style={styles.scheduleEmptyRowSmall}>
+          <View>
+            <Text style={[styles.bold, styles.leftSpace]}>Driver Details (including You)</Text>
 
           </View>
-          <View style={styles.scheduleRow}>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall]}>
-              <Text style={styles.bold}>CC</Text>
+
+          <View style={[styles.scheduleRow]}>
+
+            <View style={[styles.flexBox]}>
+              <View sty>
+                <Text > Full Name</Text>
+                <Text style={styles.marginTop}> Sex</Text>
+                <Text style={styles.marginTop}> Date of birth</Text>
+                <Text style={styles.marginTop}> Licence Type</Text>
+                <Text style={styles.marginTop}> Occupation</Text>
+
+              </View>
+              <View>
+                <Text style={styles.marginTop}>Uzzal</Text>
+                <Text style={styles.marginTop}> Male</Text>
+                <Text style={styles.marginTop}> 02 November 1978</Text>
+                <Text style={styles.marginTop}> Full UK licence</Text>
+                <Text style={styles.marginTop}> Not required</Text>
+
+              </View>
             </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall]}>
-              <Text>N/A</Text>
+            <View style={[styles.flexBox1]}>
+              <View>
+                <Text > Full Name</Text>
+                <Text style={styles.marginTop}> Sex</Text>
+                <Text style={styles.marginTop}> Date of birth</Text>
+                <Text style={styles.marginTop}> Licence Type</Text>
+                <Text style={styles.marginTop}> Occupation</Text>
+
+              </View>
+              <View>
+                <Text style={styles.marginTop}>--</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+
+              </View>
             </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall]}>
-              <Text style={styles.bold}>Year of Make</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall]}>
-              <Text>N/A</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall]}>
-              <Text style={styles.bold}>No. of seats</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellSmall, styles.scheduleCellLast]}>
-              <Text>N/A</Text>
-            </View>
-          </View>
-          <View style={styles.scheduleEmptyRowSmall}>
 
           </View>
-          <View style={styles.scheduleRow}>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Vehicle Value including accessories and modifications</Text>
+          <View style={[styles.marginTop, styles.scheduleRow]}>
+            <View style={[styles.scheduleCellSmall]}>
+              <Text style={styles.bold}>Vehicle Details:</Text>
+              <Text style={styles.marginTop}>Make</Text>
+              <Text style={styles.marginTop}>Model</Text>
+              <Text style={styles.marginTop}>Registration number</Text>
+              <Text style={styles.marginTop}>Vehicle Value</Text>
             </View>
             <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text>£1,500 to £3,000</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Date of Purchase</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text>N/A</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Reg No</Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium, styles.scheduleCellLast]}>
-              <Text>LF52BVB</Text>
-            </View>
-          </View>
-        </View>
-
-        {/* Cover Applying Table */}
-        <View style={styles.scheduleTable}>
-          <View style={styles.scheduleRow}>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Cover Applying</Text>
-            </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text>Fully Comprehensive</Text>
-            </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}></Text>
-            </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
               <Text></Text>
-            </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}></Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium, styles.scheduleCellLast]}>
-              <Text></Text>
-            </View>
-          </View>
-          <View style={styles.scheduleRow}>
-            <View style={[styles.customWidth]}>
-              <Text style={styles.bold}></Text>
-            </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text>Please refer to current Certificate of Motor Insurance for permitted drivers and limitations as to use.</Text>
+
+              <Text style={styles.bold}> NISSAN</Text>
+              <Text style={styles.marginTop}>MICRA TEMPEST</Text>
+              <Text style={styles.marginTop}>LF52BVB</Text>
+              <Text style={styles.marginTop}>£1,500 to £5,000</Text>
             </View>
 
           </View>
 
-          <View style={styles.scheduleRow}>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}>Section Applying</Text>
+
+          <View style={styles.marginTop1}>
+            <Text style={[styles.bold, styles.leftSpace]}>Accident / Claim Details</Text>
+
+          </View>
+
+          <View style={[styles.scheduleRow]}>
+
+            <View style={[styles.flexBox]}>
+              <View >
+                <Text > Driver Name</Text>
+                <Text style={[styles.marginTop, { marginLeft: 2 }]}>Date of Claims</Text>
+                <Text style={[styles.marginTop, { marginLeft: 2 }]}>Costs</Text>
+                <Text style={styles.marginTop}> Fault or Non-Fault</Text>
+
+              </View>
+              <View >
+                <Text style={styles.marginTop}>Uzzal Miah</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+
+              </View>
             </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text>See Policy working</Text>
+            <View style={[styles.flexBox1]}>
+              <View >
+                <Text > Driver Name</Text>
+                <Text style={[styles.marginTop, { marginLeft: 2 }]}>Date of Claims</Text>
+                <Text style={[styles.marginTop, { marginLeft: 2 }]}>Costs</Text>
+                <Text style={styles.marginTop}> Fault or Non-Fault</Text>
+
+              </View>
+              <View>
+                <Text style={styles.marginTop}>--</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+
+              </View>
             </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}></Text>
+
+          </View>
+          <View style={styles.underLine}></View>
+          <View style={[styles.scheduleRow, styles.marginTop1]}>
+
+            <View style={[styles.flexBox]}>
+              <View >
+                <Text > Driver Name</Text>
+                <Text style={[styles.marginTop, { marginLeft: 2 }]}>Date of Claims</Text>
+                <Text style={[styles.marginTop, { marginLeft: 2 }]}>Costs</Text>
+                <Text style={styles.marginTop}> Fault or Non-Fault</Text>
+
+              </View>
+              <View >
+                <Text style={styles.marginTop}>Uzzal Miah</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+
+              </View>
             </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text></Text>
+            <View style={[styles.flexBox1]}>
+              <View >
+                <Text > Driver Name</Text>
+                <Text style={[styles.marginTop, { marginLeft: 2 }]}>Date of Claims</Text>
+                <Text style={[styles.marginTop, { marginLeft: 2 }]}>Costs</Text>
+                <Text style={styles.marginTop}> Fault or Non-Fault</Text>
+
+              </View>
+              <View>
+                <Text style={styles.marginTop}>--</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+                <Text style={styles.marginTop}>-</Text>
+
+              </View>
             </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-              <Text style={styles.bold}></Text>
-            </View>
-            <View style={[styles.scheduleCell, styles.scheduleCellMedium, styles.scheduleCellLast]}>
-              <Text></Text>
-            </View>
-          </View>
-          <View style={styles.scheduleEmptyRow}>
-            <Text style={styles.bold}>Premium Details:</Text>
-          </View>
-
-        </View>
-
-
-
-
-
-        {/* Premium Table */}
-        <View style={styles.scheduleTable}>
-          <View style={styles.scheduleRow}>
-            <View style={[styles.customWidthCell, styles.scheduleCellWithoutBorder]}>
-              <Text style={styles.bold}>Premium</Text>
-            </View>
-            <View style={[styles.customWidthCell, styles.scheduleCell1]}>
-              <Text>18.00</Text>
-            </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.customWidthCell]}>
-              <Text style={styles.bold}>Inclusive of IPT:</Text>
-            </View>
-            <View style={[styles.scheduleCellWithoutBorder, styles.customWidthCell]}>
-              <Text>18.00</Text>
-            </View>
-          </View>
-        </View>
-        <View style={styles.scheduleEmptyRowWthCenterContent}>
-          <Text style={styles.bold}>NOTIFICATION OF CHANGES TO THE RISK</Text>
-        </View>
-
-        {/* Notification of Changes to the Risk */}
-        <View style={styles.boxedText1}>
-
-          <Text>
-            All changes to information previously supplied to us, must be notified to your insurance advisor shown above.
-
-          </Text>
-          <Text style={styles.marginTop}>
-            If you do not, your policy may be treated as if it never existed, or your claim rejected or not fully paid.
-
-          </Text>
-          <Text style={styles.marginTop}>
-            Due to the short-term nature of this policy, changes, additions or refunds are not available.
-
-          </Text >
-          <Text style={styles.marginTop}>
-            For details see the Policy Conditions section of your policy wording.
-          </Text>
-        </View>
-
-        <View style={styles.scheduleEmptyRow}>
-          <Text style={styles.bold}>
-            Endorsements Applying (Please also refer to your policy wording for full details of cover)
-          </Text>
-        </View>
-
-
-
-        <View style={styles.scheduleRow}>
-          <View style={[styles.scheduleCell2]}>
-            <Text style={[styles.underlinetext, styles.bold]}>Code</Text>
-            <Text style={styles.marginTop}>1.a</Text>
-            <Text style={styles.marginTop}>1.b</Text>
-            <Text style={styles.marginTop}>2</Text>
-            <Text style={styles.marginTop}>3</Text>
 
           </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={[styles.underlinetext, styles.bold]}>Description (see page 2 for the full endorsement wordings)</Text>
-            <Text style={styles.marginTop}>Cooling-off Period</Text>
-            <Text style={styles.marginTop}>Cancelling your cover</Text>
-            <Text style={styles.marginTop}>Excluded sections</Text>
-            <Text style={styles.marginTop}>Compulsory Excess </Text>
-
-          </View>
-
-
-
-        </View>
-        <View style={styles.scheduleEmptyRow}>
-          <Text style={styles.bold}>Policy Excess:</Text>
-        </View>
-
-
-        {/* Endorsements Applying (Summary on Page 1) */}
-        <View style={styles.boxedText}>
-
-          <Text style={styles.bold}>Any compulsory, voluntary and young / inexperienced driver accidental damage excesses must be added
-          </Text>
-          <Text style={styles.bold}>
-            together to arrive at the total for each driver.</Text>
-
-          <Text style={styles.bold}>
-
-            The levels of young / inexperienced driver excess are detailed in your policy wording
-
-          </Text>
-
-        </View>
-        <View style={styles.scheduleRow2}>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}></Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>Accidental Damage</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>Malicious Damage</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>Fire </Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>Theft</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium, styles.scheduleCellLast]}>
-            <Text style={styles.bold}>Windscreen</Text>
-          </View>
-        </View>
-        <View style={styles.scheduleRow2}>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>Voluntary Excess</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder,]}>
-            <Text style={styles.bold}>£0.00</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>-</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>-</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>-</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium, styles.scheduleCellLast]}>
-            <Text style={styles.bold}>-</Text>
-          </View>
-        </View>
-        <View style={styles.scheduleRow2}>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>Compulsory Excess</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}> £500.00</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>£500.00</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>£500.00</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium]}>
-            <Text style={styles.bold}>£500.00</Text>
-          </View>
-          <View style={[styles.scheduleCellWithoutBorder, styles.scheduleCellMedium, styles.scheduleCellLast]}>
-            <Text style={styles.bold}>£50.00</Text>
-          </View>
-        </View>
-        <View style={styles.scheduleRow3}>
-          <View style={styles.schedulefirstcolumn}>
-            <Text style={styles.bold}>Young Driver</Text>
-          </View>
-          <View >
-            <Text style={styles.bold}> please see your policy wording</Text>
-          </View>
-
-        </View>
-
-        {/* Policy Excesses Table */}
-
-
-        {/* Company Info */}
-
-      </View>
-      <View style={styles.scheduleEmptySmallestRow}>
-
-      </View>
-      <View style={styles.scheduleRow4}>
-        <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-          <Text style={styles.bold}>Reason for Issue</Text>
-        </View>
-        <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-          <Text>New Business</Text>
-        </View>
-        <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-          <Text style={styles.bold}>Date of Issue</Text>
-        </View>
-        <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-          <Text style={styles.bold}>09/06/2025</Text>
-        </View>
-        <View style={[styles.scheduleCell, styles.scheduleCellMedium]}>
-          <Text style={styles.bold}>Policy Booklet Ref:</Text>
-        </View>
-        <View style={[styles.scheduleCell, styles.scheduleCellMedium, styles.scheduleCellLast]}>
-          <Text>MUGR040 March 2014</Text>
-        </View>
-
-      </View>
-
-      <View style={styles.lastHeading}>
-        <Text >Ageas Insurance Limited, Ageas House, Hampshire Corporate Park, Templers Way, Eastleigh, Hampshire, SO53 3YA</Text>
-
-      </View>
-      <View style={styles.mainCertificateSection1}>
-        <View style={styles.secondPageFirstContent}>
-          <Text style={styles.bold}>
-            The below Endorsements amend the policy booklet Optima Car (MUGR040). They should be read in
-            conjunction with the Policy booklet, Schedule and the Certificate of Motor Insurance.
-
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-          <Text style={styles.bold}>
-            Endorsement 1 a
-          </Text>
-          <Text >
-            The ‘Cooling-off period’ shown on page 4 of the policy booklet does not apply.
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-          <Text style={styles.bold}>
-            Endorsement 1 b
-          </Text>
-          <Text >
-            Policy condition 6 ‘Cancelling you cover’, shown on page 13 of your policy booklet is removed and replaced by the
-            following;
-
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-          <Text style={styles.bold}>
-            6 Cancelling your cover
-          </Text>
-          <Text >
-            If you want to cancel your policy you must write to tell us and send us your certificate of motor insurance at the same
-            time. Due to the short term nature of this policy there will be no return of premium.
-
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-
-          <Text >
-            We or your insurance broker or intermediary can cancel this policy by sending you seven days’ notice to your last known
-            address. The reason for cancellation will be set out clearly in the communication with you. Valid reasons include, but will
-            not be limited to, those listed below;
-          </Text>
-        </View>
-        <View style={styles.thirdpagesubcontent}>
-
-          <Text >
-            - Changes to the information detailed on your proposal, statement of insurance or statement of fact, schedule or certificate of motor insurance which result in us no longer wishing to provide cover.
-          </Text>
-          <Text style={styles.marginTop}>
-            -  Where the circumstances of a new claim, or an incident we have become aware of, result in us no
-            longer wishing to provide cover.
-          </Text>
-          <Text style={styles.marginTop}>
-            -   Where we suspect fraud on this or any other related policy.
-          </Text>
-          <Text style={styles.marginTop}>
-            -   Where you, a person acting on your behalf, or any person covered to drive the vehicle uses
-            threatening, intimidating or abusive behaviour or language towards our staff, suppliers or agents acting
-            on our behalf, including your insurance adviser.
-          </Text>
-          <Text style={styles.marginTop}>
-            -    Where any person claiming cover under this policy fails to provide us with any reasonable information
-            we ask for.
-          </Text>
-          <Text style={styles.marginTop}>
-            -    Where a misrepresentation has been made that results in us no longer wishing to provide cover.
-
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-
-          <Text >
-            You must return the certificate of motor insurance to us. It is an offence under the Road Traffic Act not to return your
-            certificate of motor insurance.
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-
-          <Text >
-            If you sell or get rid of your car, you must tell us immediately. All cover under this policy will stop from the date the car is
-            no longer in your possession.
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-
-          <Text style={styles.bold}>
-            Endorsement 2
-          </Text>
-          <Text >
-            The following sections do not apply to our contract with you:
-          </Text>
-          <View style={styles.listStyle}>
+          <View style={styles.importantNote}>
             <Text>
-              Section 3 - Personal accident benefits.
-            </Text>
-            <Text>
-              Section 7 - Hotel or travel expenses.
-            </Text>
-            <Text>
-              Section 10 - No claim discount
-            </Text>
-            <Text>
-              Section 11 - Temporary replacement car.
+              IMPORTANT - You also must read the Ageas Insurance Proposer Declaration & important Notes on Pages 2 & 3
             </Text>
           </View>
         </View>
-        <View style={styles.secondpagesubcontent}>
-          <Text style={styles.bold}>
-            Endorsement 3
-          </Text>
-          <Text >
-            The below has been added to Section 2 – Loss of, or damage to, your car.
 
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-          <Text style={styles.bold}>
-            Compulsory excess
-          </Text>
-          <Text >
-            If your car or any of its accessories and spare parts are lost, stolen or damaged. A compulsory £500 excess will apply to
-            all drivers. This will be in addition to any other compulsory and voluntary excesses set out in your schedule.
 
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-          <Text style={styles.bold}>
-            Ageas Insurance Limited
-          </Text>
-          <Text >
-            Registered office address
-          </Text>
-          <Text >
-            Ageas House, Hampshire Corporate Park.
-          </Text>
-          <Text >
-            Templars Way, Eastleigh, Hampshire SO53 3YA
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-
-          <Text >
-            Registered in England and Wales No 354568
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-
-          <Text >
-            Ageas Insurance Limited is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct
-            Authority and the Prudential Regulation Authority.
-          </Text>
-        </View>
-        <View style={styles.secondpagesubcontent}>
-
-          <Text >
-            MU46 Jul 2014
-          </Text>
-        </View>
-      </View>
-      <View style={styles.lastHeading}>
-        <Text >Ageas Insurance Limited, Ageas House, Hampshire Corporate Park, Templers Way, Eastleigh, Hampshire, SO53 3YA</Text>
 
       </View>
+
     </Page>
 
 

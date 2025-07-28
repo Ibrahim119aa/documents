@@ -35,6 +35,8 @@ const styles = StyleSheet.create({
     height: 70,
     position: "absolute",
     top: 0,
+
+    
     right: 0,
   },
   certification: {
